@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP3_location_vehicules", "TP3_location_vehicules\TP3_location_vehicules.csproj", "{98F9C317-1B48-43C9-960F-465773CDC883}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP3LocationVehicules.Specs", "TP3LocationVehicules.Specs\TP3LocationVehicules.Specs.csproj", "{48F59733-D325-473D-B114-1EFBF8AE035C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98F9C317-1B48-43C9-960F-465773CDC883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98F9C317-1B48-43C9-960F-465773CDC883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98F9C317-1B48-43C9-960F-465773CDC883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98F9C317-1B48-43C9-960F-465773CDC883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48F59733-D325-473D-B114-1EFBF8AE035C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48F59733-D325-473D-B114-1EFBF8AE035C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48F59733-D325-473D-B114-1EFBF8AE035C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48F59733-D325-473D-B114-1EFBF8AE035C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4ADB615D-CE19-4B2F-951E-F5BB1E31FBF5}
+	EndGlobalSection
+EndGlobal
