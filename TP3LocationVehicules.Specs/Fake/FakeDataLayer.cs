@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using TP3_location_vehicules;
 
 namespace TP3LocationVehicules.Specs.Fake
@@ -9,9 +7,15 @@ namespace TP3LocationVehicules.Specs.Fake
     {
         public List<Client> Clients { get; set; }
 
+        public List<Vehicule> Vehicules { get; set; }
+
+        public List<Reservation> Reservations { get; set; }
+
         public FakeDataLayer()
         {
             this.Clients = new List<Client>();
+            this.Vehicules = new List<Vehicule>();
+            this.Reservations = new List<Reservation>();
         }
     }
 }

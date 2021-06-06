@@ -34,10 +34,19 @@ namespace TP3_location_vehicules
             DatePermisConduire = datePermisConduire;
         }
 
-        public Client(string nomUtilisateur, string motDePasse)
+        public int GetAge()
         {
-            NomUtilisateur = nomUtilisateur;
-            MotDePasse = motDePasse;
+            DateTime today = DateTime.Today;
+
+            // Age sans prise en compte du jour et du mois
+            int age = today.Year - this.DateNaissance.Year;
+
+            // On compare ensuite la date de naissance complète par rapport à la date d'aujourd'hui ramenée à l'année de naissance
+            // pour ensuite diminuer l'âge
+            if (this.DateNaissance.Date > today.AddYears(-age)) 
+                age--;
+
+            return age;
         }
     }
 }
