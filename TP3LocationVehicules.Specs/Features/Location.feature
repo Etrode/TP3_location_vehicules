@@ -7,6 +7,7 @@ Contexte:
 	| DaenerysTargaryen | @superKhaleesi    | Targaryen | Daenerys  | Jun 3, 1985   |  P3L932P18589895     |   Apr 1, 1996       | 
 	| JonSnow           | !bastardButProud  |  Snow     |    Jon    | Apr 15, 1978  |  678304858382        |   Jan 1, 1998       | 
 	| TheonGreyjoy      | eunuchForEver:)   |  Greyjoy  |   Theon   | Nov 1, 1970   |  084736298473        |   Aug 1, 1991       | 
+	| Jojen             | whoIsThat?        |  Reed     |   Jojen   | Jan 20, 2002  |  184736298473        |   Jun 1, 2021       | 
 	Et les véhicules suivants
 	| Immatriculation | Marque    | Modele    | Couleur   | PrixReservation | TarifKilometrique | ChevauxFiscaux |
 	|  CX-212-TK      | Renault   |  Clio 2   |  bleu      | 23             | 0,25              | 4              |
@@ -60,7 +61,7 @@ Scénario: Inscription client déjà existant
 Scénario: Cas simple affichage disponibilités plus de 25 ans
 	Etant donnée que je suis le client suivant connecté
 	| NomUtilisateur    | MotDePasse         |
-	| DaenerysTargaryen  | @superKhaleesi!   |
+	| DaenerysTargaryen  | @superKhaleesi    |
 	Et mes dates de réservation sont
 	| DateDebut   | DateFinIncluse |
 	| Jun 8, 2021 | Jun 10, 2021   |
@@ -87,11 +88,24 @@ Scénario: Cas affichage disponibilités 22 ans
 	|  AZ-124-NS      |
 	|  TZ-300-SK      |
 
+@AffichageDisponibilites19
+Scénario: Cas affichage disponibilités 19 ans
+	Etant donnée que je suis le client suivant connecté
+	| NomUtilisateur    | MotDePasse        |
+	| Jojen             | whoIsThat?        |
+	Et mes dates de réservation sont
+	| DateDebut   | DateFinIncluse |
+	| Jun 8, 2021 | Jun 10, 2021   |
+	Quand je souhaite vérifier la disponibilité des véhicules
+	Alors les véhicules disponibles sont
+	| Immatriculation |
+	|  CX-212-TK      |
+	|  AZ-124-NS      |
 
-#  Réservation (Les dates et le véhicules sont forcément valides car vérifier dans les disponibilités)
+#  Réservation (Les dates et les véhicules sont forcément valides car proviennent de l'affichage des disponibilités)
 
 @ClientReservation
-Scénario: Cas simple de réservation acceptée
+Scénario: prix estimé d'une réservation
 	Etant donnée que je suis le client suivant connecté
 	| NomUtilisateur    | MotDePasse        |
 	| JoffreyBaratheon  | KingOfTheSeven!   |

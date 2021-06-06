@@ -75,13 +75,12 @@ namespace TP3_location_vehicules
             foreach(Vehicule vehicule in this._dataLayer.Vehicules)
             {
                 Reservation reservationExiste = this._dataLayer.Reservations.SingleOrDefault(r => r.Vehicule == vehicule && ((debut >= r.DateDebut && debut <= r.DateFin) || (fin >= r.DateDebut && fin <= r.DateFin)));
-                if (reservationExiste != null)
+                if (reservationExiste == null)
                     vehiculesDisponibles.Add(vehicule);
             }
             // Aucun véhicule disponible
             if (!vehiculesDisponibles.Any())
                 return listeImmatriculations;
-
             // Restrictions suivant l'âge
             if (utilisateurConnecte.GetAge() < 21)
             {
@@ -103,7 +102,6 @@ namespace TP3_location_vehicules
             {
                 listeImmatriculations.Add(vehiculeCourant.Immatriculation);
             }
-
             return listeImmatriculations;
         }
 

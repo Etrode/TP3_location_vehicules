@@ -207,7 +207,7 @@ namespace TP3LocationVehicules.Specs.Steps
             {
                 egal = listeImmatriculations.All(l => _immatDisponibles.Contains(l)) && _immatDisponibles.All(l => listeImmatriculations.Contains(l));
             }
-            egal.Should().BeFalse();
+            egal.Should().BeTrue();
         }
 
         // Réservation ------------
